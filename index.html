@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title> Closet Adventures: Mix & Inspire </title>
+  </head>
+  <body>
+    <header id="header-bar">
+    <h1 id="heading"> Closet Adventures: Mix & Inspire</h1>
+    </header>
+    <div class="layout">
+      <!-- Left Column: Back buttons -->
+      <div class="left-buttons">
+        <button onclick="prevHair()">⬅ hair</button>
+        <button onclick="prevTop()">⬅ top</button>
+        <button onclick="prevPants()">⬅ pants</button>
+        <button onclick="prevShoes()">⬅ shoes</button>
+      </div>
+
+      <!-- Center Column: Dress-up area -->
+      <div class="center-image">
+        <div id="backdrop">
+          <div id="pants"></div>
+          <div id="hair"></div>
+          <div id="girl"></div>
+          <div id="shoes"></div>
+          <div id="top"></div>
+          <img src="images/character-base.png" id="character-base" alt="Character Base">
+        </div>
+      </div>
+
+      <!-- Right Column: Forward buttons -->
+      <div class="right-buttons">
+        <button onclick="nextHair()">hair ➡</button>
+        <button onclick="nextTop()">top ➡</button>
+        <button onclick="nextPants()">pants ➡</button>
+        <button onclick="nextShoes()">shoes ➡</button>
+      </div>
+    </div>
+    <script src="./javascript.js"></script>
+  </body>
+
