@@ -1,4 +1,4 @@
-// Store image options for each category
+
 const hairStyles = [
   "images/hair0.png",
   "images/hair1.png",
@@ -35,62 +35,79 @@ const shoeStyles = [
   "images/shoes4.png",
 ];
 
-// Track current index for each category
+// Alt text?
+const hairAlts = [
+  "No hair", "Straight brown hair", "Brown hair in two braids", "Curly brown hair", "Brown hair in a side braid"
+];
+
+const topAlts = [
+  "Black body suite top", "Red sporty jacket", "Denim jacket", "Creamy blause with bows", "Brown leather jacket", "Illini Crewneck"
+];
+
+const pantsAlts = [
+  "Black body suite bottom", "Blue jeans", "Dark wash jorts", "Maxi denim skirt", "grey sweatpants", "Brown maxi skirt", "Black mini skirt", "White mini dress"
+];
+
+const shoeAlts = [
+  "No shoes", "Brown oxfords", "Green rainboots", "brown leather harness boots", "white tennis shoes"
+];
+
 let currentHair = 0;
 let currentTop = 0;
 let currentPants = 0;
 let currentShoes = 0;
 
-// Utility: Set background image
-function setStyle(id, image) {
+
+function setStyle(id, image, altText) {
   const el = document.getElementById(id);
   el.style.backgroundImage = `url("${image}")`;
   el.style.backgroundSize = "contain";
   el.style.backgroundRepeat = "no-repeat";
   el.style.backgroundPosition = "center";
+  el.setAttribute("aria-label", altText);
 }
 
-// HAIR
+
 function nextHair() {
   currentHair = (currentHair + 1) % hairStyles.length;
-  setStyle("hair", hairStyles[currentHair]);
+  setStyle("hair", hairStyles[currentHair], hairAlts[currentHair]);
 }
 function prevHair() {
   currentHair = (currentHair - 1 + hairStyles.length) % hairStyles.length;
-  setStyle("hair", hairStyles[currentHair]);
+  setStyle("hair", hairStyles[currentHair], hairAlts[currentHair]);
 }
 
-// TOP
+
 function nextTop() {
   currentTop = (currentTop + 1) % topStyles.length;
-  setStyle("top", topStyles[currentTop]);
+  setStyle("top", topStyles[currentTop], topAlts[currentTop]);
 }
 function prevTop() {
   currentTop = (currentTop - 1 + topStyles.length) % topStyles.length;
-  setStyle("top", topStyles[currentTop]);
+  setStyle("top", topStyles[currentTop], topAlts[currentTop]);
 }
 
-// PANTS
+
 function nextPants() {
   currentPants = (currentPants + 1) % pantsStyles.length;
-  setStyle("pants", pantsStyles[currentPants]);
+  setStyle("pants", pantsStyles[currentPants], pantsAlts[currentPants]);
 }
 function prevPants() {
   currentPants = (currentPants - 1 + pantsStyles.length) % pantsStyles.length;
-  setStyle("pants", pantsStyles[currentPants]);
+  setStyle("pants", pantsStyles[currentPants], pantsAlts[currentPants]);
 }
 
-// SHOES
+
 function nextShoes() {
   currentShoes = (currentShoes + 1) % shoeStyles.length;
-  setStyle("shoes", shoeStyles[currentShoes]);
+  setStyle("shoes", shoeStyles[currentShoes], shoeAlts[currentShoes]);
 }
 function prevShoes() {
   currentShoes = (currentShoes - 1 + shoeStyles.length) % shoeStyles.length;
-  setStyle("shoes", shoeStyles[currentShoes]);
+  setStyle("shoes", shoeStyles[currentShoes], shoeAlts[currentShoes]);
 }
 
-// Initialize with default styles
+
 window.addEventListener("DOMContentLoaded", () => {
   setStyle("hair", hairStyles[currentHair]);
   setStyle("top", topStyles[currentTop]);

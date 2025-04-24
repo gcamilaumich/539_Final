@@ -159,7 +159,7 @@ button:hover {
   box-shadow: 0px 2px 4px 1px rgb(73, 75, 184);
 }
 
-/* Heading */
+
 #heading {
   text-align: center;
   font-size: 2rem;
@@ -169,7 +169,7 @@ button:hover {
   margin-top: 2rem;
 }
 
-/* Mobile layout */
+/* This was designed desktop-first 😬 Had to use max-width to fix it and make it mobile accessible. */
 @media (max-width: 768px) {
   .layout {
     grid-template-columns: 1fr;

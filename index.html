@@ -11,7 +11,7 @@
     <header id="header-bar">
     <h1 id="heading"> Closet Adventures: Mix & Inspire</h1>
     </header>
-    <div class="layout">
+    <main class="layout">
       <!-- Left Column: Back buttons -->
       <div class="left-buttons">
         <button onclick="prevHair()">⬅ hair</button>
@@ -23,11 +23,11 @@
       <!-- Center Column: Dress-up area -->
       <div class="center-image">
         <div id="backdrop">
-          <div id="pants"></div>
-          <div id="hair"></div>
-          <div id="girl"></div>
-          <div id="shoes"></div>
-          <div id="top"></div>
+          <div id="pants" role="img"></div>
+          <div id="hair" role="img"></div>
+          <!-- <div id="girl" role="img" alt></div> -->
+          <div id="shoes" role="img"></div>
+          <div id="top" role="img"></div>
           <img src="images/character-base.png" id="character-base" alt="Character Base">
         </div>
       </div>
@@ -39,7 +39,7 @@
         <button onclick="nextPants()">pants ➡</button>
         <button onclick="nextShoes()">shoes ➡</button>
       </div>
-    </div>
+    </main>
     <script src="./javascript.js"></script>
   </body>
 
