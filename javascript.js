@@ -4,28 +4,35 @@ const hairStyles = [
   "images/hair1.png",
   "images/hair2.png",
   "images/hair3.png",
+  "images/hair4.png"
 ];
 
 const topStyles = [
   "images/top0.png",
-  "images/top1.png",
-  // "images/dress2.png",
-  // "images/dress3.png",
-  // "images/dress4.png",
-  // "images/dress5.png"
+  "images/top10.png",
+  "images/top2.png",
+  "images/top3.png",
+  "images/top4.png",
+  "images/top5.png"
 ];
 
 const pantsStyles = [
   "images/pants0.png",
   "images/pants1.png",
-  // "images/accessory3.png",
-  // "images/accessory4.png"
+  "images/pants2.png",
+  "images/pants3.png",
+  "images/pants4.png",
+  "images/pants5.png",
+  "images/pants6.png",
+  "images/pants7.png",
 ];
 
 const shoeStyles = [
   "images/shoes0.png",
   "images/shoes1.png",
-  // "images/shoes3.png"
+  "images/shoes2.png",
+  "images/shoes3.png",
+  "images/shoes4.png",
 ];
 
 // Track current index for each category
